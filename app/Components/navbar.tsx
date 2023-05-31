@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 function navbar() {
     return (
         <nav className='py-10 flex justify-between sm:mb-12'>
-            <h1 className=' text-xl'>Developed by Daniel</h1>
+            <h1 className=' text-xl'>Daniel Simms</h1>
             <ul className=' flex items-center'>
                 <li>
                     <a
