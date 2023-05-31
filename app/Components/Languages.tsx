@@ -1,62 +1,50 @@
-"use client"
 import React from 'react';
 import ReactIMG from 'public/react-js-logo.png';
 import JavaIMG from 'public/java.png';
 import CppIMG from 'public/c-plus-plus.png';
 import PythonIMG from 'public/python-logo.png';
 import HtmlIMG from 'public/html (1).png';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import javascriptIMG from 'public/javascript-logo.png';
 import cssIMG from 'public/css3.png';
 
+interface LanguageCardProps {
+  title: string;
+  image: StaticImageData;
+}
+
 function SecondPage() {
     return (
-        <div>
-            <main>
-                <div
-                    className="text-center shadow-2xl p-10 rounded-xl mb-10 mt-3 dark:bg-white flex-1 mx-auto">
-                    <h1 className="text-4xl py-1 pb-10">Programming Languages</h1>
-                    <div className="flex justify-center gap-40">
-                        <div
-                            className="flex flex-col text-center items-center justify-center shadow-md rounded-lg hover:scale-105 transition-transform duration-200 ease-in">
-                            <h2 className="text-2xl leading-8 py-3">Java</h2>
-                            <Image src={JavaIMG} alt={'Java Image'} width={150}/>
-                        </div>
-                        <div
-                            className="flex flex-col text-center items-center justify-center shadow-md rounded-lg hover:scale-105 transition-transform duration-200 ease-in">
-                            <h2 className="text-2xl leading-8 py-3">C++</h2>
-                            <Image src={CppIMG} alt={'CPP Image'} width={150}/>
-                        </div>
-                        <div
-                            className="flex flex-col text-center items-center justify-center shadow-md rounded-lg hover:scale-105 transition-transform duration-200 ease-in">
-                            <h2 className="text-md sm:text-2xl leading-8 py-3">Python</h2>
-                            <Image src={PythonIMG} alt={'Python Image'} width={150}/>
-                        </div>
-                        <div
-                            className="flex flex-col text-center items-center justify-center shadow-md rounded-lg hover:scale-105 transition-transform duration-200 ease-in">
-                            <h2 className="text-2xl leading-8 py-3">React</h2>
-                            <Image src={ReactIMG} alt={'React Image'} width={150}/>
-                        </div>
-                        <div
-                            className="flex flex-col text-center items-center justify-center shadow-md rounded-lg hover:scale-105 transition-transform duration-200 ease-in">
-                            <h2 className="text-2xl leading-8 py-3">HTML</h2>
-                            <Image src={HtmlIMG} alt={'HTML Image'} width={150}/>
-                        </div>
-                        <div
-                            className="flex flex-col text-center items-center justify-center shadow-md rounded-lg hover:scale-105 transition-transform duration-200 ease-in">
-                            <h2 className="text-2xl leading-8 py-3">CSS</h2>
-                            <Image src={cssIMG} alt={'CSS Image'} width={150}/>
-                        </div>
-                        <div
-                            className="flex flex-col text-center items-center justify-center shadow-md rounded-lg hover:scale-105 transition-transform duration-200 ease-in">
-                            <h2 className="text-2xl leading-8 py-3">JavaScript</h2>
-                            <Image src={javascriptIMG} alt={'CSS Image'} width={150}/>
-                        </div>
-                    </div>
-                </div>
-            </main>
-        </div>
+      <div>
+        <main className="px-4">
+          <div className="text-center shadow-2xl p-6 rounded-xl mb-6 mt-3 dark:bg-white flex flex-1 mx-auto flex-col">
+            <h1 className="text-2xl md:text-4xl py-1 pb-8">Programming Languages</h1>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+              <LanguageCard title="Java" image={JavaIMG} />
+              <LanguageCard title="C++" image={CppIMG} />
+              <LanguageCard title="Python" image={PythonIMG} />
+              <LanguageCard title="React" image={ReactIMG} />
+              <LanguageCard title="HTML" image={HtmlIMG} />
+              <LanguageCard title="CSS" image={cssIMG} />
+              <LanguageCard title="JavaScript" image={javascriptIMG} />
+            </div>
+          </div>
+        </main>
+      </div>
     );
-}
+  }
+  
+function LanguageCard({ title, image }: LanguageCardProps) {
+    return (
+      <div className="flex flex-col items-center justify-center shadow-md rounded-lg hover:scale-105 transition-transform duration-200 ease-in p-4">
+        <h2 className="text-base md:text-xl leading-6 py-2 flex-grow">{title}</h2>
+        <div className="w-24 sm:w-36">
+          <Image src={image} alt={`${title} Image`} layout="responsive" width={150} height={150} />
+        </div>
+      </div>
+    );
+  }
+  
+  
 
 export default SecondPage;
