@@ -16,8 +16,14 @@ function FrontPage() {
           <a className="cursor-pointer" href="https://github.com/Danavarro63"><AiFillGithub /></a>
           <a className="cursor-pointer" href="https://www.linkedin.com/in/daniel-simms-5956b9204/"><AiFillLinkedin /></a>
         </div>
-        <div className="mx-auto border-solid border-black rounded-full aspect-square w-80 mt-20 flex justify-center items-center">
-          <Image priority src={DanielPfp} alt="ProfilePhoto" />
+        <div className="mx-auto rounded-full aspect-square w-50 max-w-xl mt-20">
+          <div className="relative pb-full">
+            <Image
+              src={DanielPfp}
+              alt="ProfilePhoto"
+              className="rounded-full"
+            />
+          </div>
         </div>
       </div>
     </div>
