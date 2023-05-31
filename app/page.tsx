@@ -6,7 +6,7 @@ import Education from './Components/education';
 
 export default function Home() {
     return (
-        <div className=' bg-white px-4 sm:px-10 dark:bg-gray-900 min-w-min'>
+        <div className=' bg-white px-10 md:px-20 lg:px-40'>
             <section className="min-h-screen">
                 <Nav/>
                 <Frontpage/>
