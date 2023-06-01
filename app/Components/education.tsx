@@ -1,14 +1,25 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect}from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 
 function Education() {
+
+  useEffect(()=>{
+    AOS.init()
+  },[])
     return (
       <div>
         <main className="px-4">
-          <div className="text-center shadow-2xl p-6 rounded-xl dark:bg-white flex flex-col gap-4 max-w-md mx-auto mt-12 mb-8">
+          <div className="text-center shadow-2xl p-6 rounded-xl dark:bg-white flex flex-col gap-4 max-w-md mx-auto mt-12 mb-8" data-aos="zoom-out-up" data-aos-duration='2000'>
             <h1 className="text-2xl md:text-4xl py-1">Education</h1>
             <div className="flex flex-col gap-4">
+              <div className="shadow-md rounded-lg hover:scale-105 transition-transform duration-200 ease-in p-6">
+                <h2 className="text-base md:text-2xl leading-6 py-3">Studying Degree</h2>
+                <p className="text-xs md:text-xl">Computer-Science with Year in Industry - 2.1</p>
+              </div>
               <div className="shadow-md rounded-lg hover:scale-105 transition-transform duration-200 ease-in p-6">
                 <h2 className="text-base md:text-2xl leading-6 py-3">A-Levels</h2>
                 <ul className="text-xs md:text-xl">
@@ -16,10 +27,6 @@ function Education() {
                   <li>A - Mathematics</li>
                   <li>A - Photography</li>
                 </ul>
-              </div>
-              <div className="shadow-md rounded-lg hover:scale-105 transition-transform duration-200 ease-in p-6">
-                <h2 className="text-base md:text-2xl leading-6 py-3">Studying Degree</h2>
-                <p className="text-xs md:text-xl">Computer-Science with Year in Industry - 2.1</p>
               </div>
               <div className="shadow-md rounded-lg hover:scale-105 transition-transform duration-200 ease-in p-6">
                 <h2 className="text-base md:text-2xl leading-6 py-3">GCSEs</h2>
