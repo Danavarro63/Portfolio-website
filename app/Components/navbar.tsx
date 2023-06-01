@@ -1,12 +1,13 @@
 'use client'
 import React, {useState} from 'react'
 import 'aos/dist/aos.css'
+import {AiOutlineShrink} from 'react-icons/ai'
 
 
 function navbar() {
     return (
         <nav className='py-10 flex justify-between sm:mb-12'>
-            <h1 className=' text-xl' data-aos="zoom-down" data-aos-duration="1500">Daniel Simms</h1>
+            <h1 className=' text-xl' data-aos="zoom-down" data-aos-duration="1500" ><AiOutlineShrink className='text-teal-700' size={40}/></h1>
             <ul className=' flex items-center'>
                 <li>
                     <a
