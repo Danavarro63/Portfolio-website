@@ -7,6 +7,7 @@ import HtmlIMG from 'public/html (1).png';
 import Image, { StaticImageData } from 'next/image';
 import javascriptIMG from 'public/javascript-logo.png';
 import cssIMG from 'public/css3.png';
+import tailwindIMG from 'public/Tailwind_CSS_Logo.svg.png'
 
 interface LanguageCardProps {
   title: string;
@@ -17,7 +18,7 @@ function SecondPage() {
     return (
       <div>
         <main className="px-4">
-          <div className="text-center shadow-2xl p-6 rounded-xl mb-6 mt-3 dark:bg-white flex flex-1 mx-auto flex-col">
+          <div className="text-center shadow-2xl p-6 rounded-xl mb-40 mt-24 dark:bg-white flex flex-1 mx-auto flex-col">
             <h1 className="text-2xl md:text-4xl py-1 pb-8">Programming Languages</h1>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
               <LanguageCard title="Java" image={JavaIMG} />
@@ -27,6 +28,7 @@ function SecondPage() {
               <LanguageCard title="HTML" image={HtmlIMG} />
               <LanguageCard title="CSS" image={cssIMG} />
               <LanguageCard title="JavaScript" image={javascriptIMG} />
+              <LanguageCard title="TailWind" image={tailwindIMG} />
             </div>
           </div>
         </main>
