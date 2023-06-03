@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
 import 'aos/dist/aos.css';
-import {AiOutlineShrink} from 'react-icons/ai';
 import {Link} from 'react-scroll';
 import {RiMenu4Line, RiCloseLine} from 'react-icons/ri';
-
+import {RxHamburgerMenu} from 'react-icons/rx'
 function Navbar() {
     const [isMenuOpen,
         setIsMenuOpen] = useState(false);
@@ -15,10 +14,10 @@ function Navbar() {
     return (
         <nav className="py-10 px-20 flex justify-between md:mb-12">
             <div className="md:hidden">
-                <button className="outline-none mobile-menu-button" onClick={toggleMenu}>
+                <button className="outline-none mobile-menu-button " onClick={toggleMenu}>
                     {isMenuOpen
                         ? (<RiCloseLine className="text-3xl text-gray-600"/>)
-                        : (<RiMenu4Line className="text-3xl text-gray-600"/>)}
+                        : (<RxHamburgerMenu className="text-3xl text-gray-600"/>)}
                 </button>
             </div>
 
