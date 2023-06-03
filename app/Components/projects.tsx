@@ -19,7 +19,9 @@ interface gitButtonProps{
 
 function projects() {
     return (
-      <main className="px-4">
+      <main className="px-4 pb-72" data-aos="flip-left" id='projects'
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000">
         <div className="text-center p-6 rounded-xl mb-40 dark:bg-white flex flex-1 mx-auto flex-col">
           <h1 className="text-4xl sm:text-6xl py-1 mb-12 sm:mb-24">Projects</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">

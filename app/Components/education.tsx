@@ -4,12 +4,12 @@ import 'aos/dist/aos.css';
 
 function Education() {
   useEffect(() => {
-    AOS.init();
+    AOS.init({mirror:true, once:true});
   }, []);
 
   return (
     <div >
-      <main className="px-4">
+      <main className="px-4 pb-72" id="education">
         <div
           className="text-center shadow-2xl p-6 rounded-xl dark:bg-white flex flex-col gap-4 max-w-md mx-auto mt-12 mb-8"
           data-aos="zoom-out-up"
