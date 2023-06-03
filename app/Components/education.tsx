@@ -9,7 +9,7 @@ function Education() {
 
   return (
     <div >
-      <main className="px-4 pb-72" id="education">
+      <main className="px-4 pb-32 md:pb-72" id="education">
         <div
           className="text-center shadow-2xl p-6 rounded-xl dark:bg-white flex flex-col gap-4 max-w-md mx-auto mt-12 mb-8"
           data-aos="zoom-out-up"

@@ -8,7 +8,7 @@ import 'aos/dist/aos.css'
 function FrontPage() {
   return (
     <div>
-      <div className="text-center p-10 pb-72">
+      <div className="text-center p-10 pb-32 md:pb-72">
         <h2 className="text-5xl pb-2 text-teal-600 font-medium sm:mb-6 sm:text-7xl" data-aos="zoom-in-down" data-aos-duration="1000">Daniel Simms</h2>
         <h3 className="text-2xl py-2 sm:text-4xl" data-aos="zoom-in-down" data-aos-duration="1500">Computer Science Undergraduate</h3>
         <p className="text-md py-5 leading-8 text-gray-800 sm:text-xl" data-aos="fade-right" data-aos-duration="1800">
@@ -22,6 +22,8 @@ function FrontPage() {
           <div className="relative pb-full">
             <Image
               src={DanielPfp}
+              data-aos="zoom-in-up"
+              data-aos-duration="1000"
               alt="ProfilePhoto"
               className="rounded-full"
             />

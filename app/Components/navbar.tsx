@@ -12,7 +12,8 @@ function Navbar() {
     };
 
     return (
-        <nav className="py-10 px-20 flex justify-between md:mb-12">
+        <nav className="py-10 px-20 flex justify-between md:mb-12 " data-aos="zoom-down"
+        data-aos-duration="1500">
             <div className="md:hidden">
                 <button className="outline-none mobile-menu-button " onClick={toggleMenu}>
                     {isMenuOpen

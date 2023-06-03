@@ -17,9 +17,9 @@ interface LanguageCardProps {
 function SecondPage() {
     return (
         <div id='languages'>
-            <main className="px-4 pb-60" data-aos="zoom-in-up" data-aos-duration="1000">
+            <main className="px-4 pb-32 md:pb-72" data-aos="zoom-in-up" data-aos-duration="1000">
                 <div
-                    className="text-center shadow-2xl p-6 rounded-xl mb-40 mt-24 dark:bg-white flex flex-1 mx-auto flex-col">
+                    className="text-center shadow-2xl p-6 rounded-xl mb-40dark:bg-white flex flex-1 mx-auto flex-col">
                     <h1 className="text-2xl md:text-4xl py-1 pb-8">Programming Languages</h1>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                         <LanguageCard title="Java" image={JavaIMG}/>
