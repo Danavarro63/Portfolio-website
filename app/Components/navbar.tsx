@@ -12,7 +12,7 @@ function Navbar() {
     };
 
     return (
-        <nav className="py-10 px-20 flex justify-between md:mb-12 " data-aos="zoom-down"
+        <nav className="py-10 px-0 lg:px-10 xl:px-20 flex justify-between md:mb-12 " data-aos="zoom-down"
         data-aos-duration="1500">
             <div className="md:hidden">
                 <button className="outline-none mobile-menu-button " onClick={toggleMenu}>
@@ -54,15 +54,16 @@ function Navbar() {
 
             <ul className="flex items-center ml-auto">
                 <li>
-                    <a
-                        className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
-                        href="https://drive.google.com/file/d/1uCYNfzjvmC1uIAtMKSQyafk9F0xBZUsR/view?usp=sharing"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        data-aos="zoom-down"
-                        data-aos-duration="1500">
-                        Resume
-                    </a>
+                <a
+  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 sm:ml-0 sm:mr-4"
+  href="https://drive.google.com/file/d/1uCYNfzjvmC1uIAtMKSQyafk9F0xBZUsR/view?usp=sharing"
+  target="_blank"
+  rel="noopener noreferrer"
+  data-aos="zoom-down"
+  data-aos-duration="1500"
+>
+  Resume
+</a>
                 </li>
             </ul>
 
