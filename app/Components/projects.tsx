@@ -19,7 +19,7 @@ interface gitButtonProps{
 
 function projects() {
     return (
-      <main className="px-4 pb-72" data-aos="flip-left" id='projects'
+      <main className="px-4 pb-72" data-aos="zoom-in-up" id='projects'
       data-aos-easing="ease-out-cubic"
       data-aos-duration="2000">
         <div className="text-center p-6 rounded-xl mb-40 dark:bg-white flex flex-1 mx-auto flex-col">

@@ -20,8 +20,7 @@ function FrontPage() {
         </div>
         <div className="mx-auto rounded-full aspect-square w-50 max-w-xl mt-20">
           <div className="relative pb-full">
-            <Image data-aos='flip-left'
-            data-aos-duration='2000'
+            <Image
               src={DanielPfp}
               alt="ProfilePhoto"
               className="rounded-full"
