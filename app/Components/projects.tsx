@@ -5,6 +5,7 @@ import PlaceHolder from 'public/Project PlaceHolder.png'
 import FlappyBird from 'public/Flappy.jpg'
 import Revision from 'public/Revision.png'
 import Portfolio from 'public/Portfolio.jpg'
+import Othello from 'public/Othello-grid.png'
 interface projectCardProps {
     image : StaticImageData;
     livebutton : boolean;
@@ -49,6 +50,12 @@ function projects() {
                         giturl='https://github.com/Danavarro63/Portfolio-website'
                         livebutton={true}
                         image={Portfolio}/>
+                     <ProjectCard
+                        title="Java/Swing"
+                        liveurl=''
+                        giturl='https://github.com/Danavarro63/Reversi'
+                        livebutton={false}
+                        image={Othello}/>
                 </div>
             </div>
         </main>
