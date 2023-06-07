@@ -5,7 +5,7 @@ import PlaceHolder from 'public/Project PlaceHolder.png'
 import FlappyBird from 'public/Flappy.jpg'
 import Revision from 'public/Revision.png'
 import Portfolio from 'public/Portfolio.jpg'
-import Othello from 'public/Othello-grid.png'
+import Othello from 'public/othello-grid.png'
 interface projectCardProps {
     image : StaticImageData;
     livebutton : boolean;
