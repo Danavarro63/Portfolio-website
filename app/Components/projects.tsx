@@ -77,12 +77,12 @@ function ProjectCard({image, livebutton, giturl, liveurl, title} : projectCardPr
             }}/>
             <div
                 className="flex flex-col gap-4 h-full w-full border-black border-2 justify-between items-center absolute top-0 left-0  bg-gradient-to-r from-cyan-500/60 to-teal-500/60 opacity-0 text-white hover:opacity-100 transition ease-in-out duration-500 hover:cursor-pointer">
-                <h1 className='z-10 text-white left-0 text-3xl font-light pt-10'>{title}</h1>
+                <h1 className='z-10 text-white left-0 sm:text-md md:text-xl lg:text-2xl font-light pt-10'>{title}</h1>
                 <div className='gap-4 left-10 pb-20'>
                     <div className="flex gap-4">
                         <Button url={giturl} label="GitHub"/> {livebutton && <Button url={liveurl} label="Live"/>}
                     </div>
-                </div>
+                </div>  
             </div>
         </div>
     );
