@@ -3,6 +3,7 @@ import 'aos/dist/aos.css';
 import {Link} from 'react-scroll';
 import {RiMenu4Line, RiCloseLine} from 'react-icons/ri';
 import {RxHamburgerMenu} from 'react-icons/rx'
+
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
   

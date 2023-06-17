@@ -6,6 +6,7 @@ import FlappyBird from 'public/Flappy.jpg'
 import Revision from 'public/Revision.png'
 import Portfolio from 'public/Portfolio.jpg'
 import Othello from 'public/othello-grid.png'
+import Eco from 'public/Eco-Friendly.png'
 interface projectCardProps {
     image : StaticImageData;
     livebutton : boolean;
@@ -22,7 +23,7 @@ interface gitButtonProps {
 function projects() {
     return (
         <main
-            className="px-4 pb-32 md:pb-72"
+            className="px-4 pb-32 md:pb-72 "
             data-aos="zoom-in-up"
             id='projects'
             data-aos-easing="ease-out-cubic"
@@ -56,6 +57,12 @@ function projects() {
                         giturl='https://github.com/Danavarro63/Reversi'
                         livebutton={false}
                         image={Othello}/>
+                    <ProjectCard
+                        title="NextJs/Tailwind"
+                        liveurl='https://eco-friendly-website.vercel.app/'
+                        giturl='https://github.com/Danavarro63/eco-friendly-website'
+                        livebutton={true}
+                        image={Eco}/>
                 </div>
             </div>
         </main>
