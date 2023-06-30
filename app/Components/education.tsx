@@ -19,7 +19,7 @@ function Education() {
                         <div
                             className="shadow-md rounded-lg hover:scale-105 transition-transform duration-200 ease-in p-6">
                             <h2 className="text-base md:text-2xl leading-6 py-3">Studying Degree</h2>
-                            <p className="text-xs md:text-xl">Computer-Science with Year in Industry - 2.1</p>
+                            <p className="text-xs md:text-xl">Computer-Science with Year in Industry - Predicted Grade : 2.1</p>
                         </div>
                         <div
                             className="shadow-md rounded-lg hover:scale-105 transition-transform duration-200 ease-in p-6">
