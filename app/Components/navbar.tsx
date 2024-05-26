@@ -39,7 +39,7 @@ function Navbar() {
           <li>
             {!isMenuOpen &&<a
               className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 sm:ml-0 sm:mr-4"
-              href="https://drive.google.com/file/d/1uCYNfzjvmC1uIAtMKSQyafk9F0xBZUsR/view?usp=sharing"
+              href="https://drive.google.com/file/d/1WTFveYbMiijnvR6TmgmurtQmcWr_20V_/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               data-aos="zoom-down"
