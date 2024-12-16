@@ -1,13 +1,13 @@
 import React from 'react';
-import ReactIMG from 'public/react-js-logo.png';
-import JavaIMG from 'public/java.png';
-import CppIMG from 'public/c-plus-plus.png';
-import PythonIMG from 'public/python-logo.png';
-import HtmlIMG from 'public/html (1).png';
+import ReactIMG from '/public/react-js-logo.png'
+import JavaIMG from '/public/java.png';
+import CppIMG from '/public/c-plus-plus.png';
+import PythonIMG from '/public/python-logo.png';
+import HtmlIMG from '/public/html (1).png';
 import Image, {StaticImageData} from 'next/image';
-import javascriptIMG from 'public/javascript-logo.png';
-import cssIMG from 'public/css3.png';
-import tailwindIMG from 'public/Tailwind_CSS_Logo.svg.png'
+import javascriptIMG from '/public/javascript-logo.png';
+import cssIMG from '/public/css3.png';
+import tailwindIMG from '/public/Tailwind_CSS_Logo.svg.png'
 
 interface LanguageCardProps {
     title : string;

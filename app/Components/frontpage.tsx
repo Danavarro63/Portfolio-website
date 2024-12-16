@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai';
 import Image from 'next/image';
-import DanielPfp from 'public/ProfilePic.png';
+import DanielPfp from '/public/ProfilePic.png';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
