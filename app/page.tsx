@@ -5,12 +5,14 @@ import Languages from './Components/Languages';
 import Education from './Components/education';
 import Projects from './Components/projects';
 import Head from 'next/head';
+import JsonLd from './Components/JsonLd';
+import SocialShare from './Components/SocialShare';
 
 export default function Home() {
 
     return (
         <div className=' bg-white px-10'>
-            <section className="min-h-screen">
+            <JsonLd />
             <Head>
                 <title>Daniel Simms - Computer Science Undergraduate</title>
                 <meta name="description" content="Daniel Simms, Computer Science student at the University of Nottingham, learning Full Stack Development, with expertise in Java and C++." />
@@ -24,12 +26,12 @@ export default function Home() {
                 <meta name="twitter:description" content="Daniel Simms, Computer Science student at the University of Nottingham, learning Full Stack Development, with expertise in Java and C++." />
                 <meta name="twitter:image" content="/ProfilePic.png" />
             </Head>
-                <Nav/>
-                <Frontpage/>
-                <Education/>
-                <Languages/>
-                <Projects/>
-            </section>
+            <Nav/>
+            <Frontpage/>
+            <Education/>
+            <Languages/>
+            <Projects/>
+            <SocialShare />
         </div>
     )
 }
