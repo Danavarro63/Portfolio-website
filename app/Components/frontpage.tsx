@@ -12,7 +12,7 @@ function FrontPage() {
                 <h1
                     className="text-5xl pb-2 text-teal-600 font-medium sm:mb-6 sm:text-7xl"
                     data-aos="zoom-in-down"
-                    data-aos-duration="1000">Daniel Simms Dev</h1>
+                    data-aos-duration="1000">Daniel Simms</h1>
                 <h3
                     className="text-2xl py-2 sm:text-4xl"
                     data-aos="zoom-in-down"
