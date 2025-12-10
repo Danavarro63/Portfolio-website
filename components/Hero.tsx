@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import Magnetic from './Magnetic';
-import { Download, ArrowDown } from 'lucide-react';
+import { Eye } from 'lucide-react';
 
 interface HeroProps {
   startAnimation: boolean;
@@ -132,12 +132,21 @@ const Hero: React.FC<HeroProps> = ({ startAnimation }) => {
   }, [startAnimation]);
 
   const splitText = (text: string) => {
-    return text.split('').map((char, index) => (
-      <span key={index} className="hero-char inline-block whitespace-pre">
-        {char}
-      </span>
-    ));
-  };
+  const words = text.split(' ');
+  
+  return words.map((word, wordIndex) => (
+    <span key={wordIndex} className="inline-block whitespace-nowrap">
+      {word.split('').map((char, charIndex) => (
+        <span key={charIndex} className="hero-char inline-block">
+          {char}
+        </span>
+      ))}
+      {wordIndex < words.length - 1 && (
+        <span className="hero-char inline-block whitespace-pre"> </span>
+      )}
+    </span>
+  ));
+};
 
   return (
     <section ref={containerRef} id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-20">
@@ -158,7 +167,7 @@ const Hero: React.FC<HeroProps> = ({ startAnimation }) => {
             {splitText("Daniel Simms")}
           </div>
           <div className="block overflow-hidden mt-2">
-            <span className="hero-glitch text-[#00ff88] shadow-[0_0_60px_rgba(0,255,136,0.4)]">
+            <span className="hero-glitch text-[#00ff88] shadow-[0_0_60px_rgba(0,255,136,0.3)]">
               {splitText("Software Engineer")}
             </span>
           </div>
@@ -170,16 +179,24 @@ const Hero: React.FC<HeroProps> = ({ startAnimation }) => {
 
         <div className="flex flex-wrap gap-4 justify-center mb-16">
           <Magnetic>
-            <button className="hero-btn group relative px-8 py-4 bg-[#00ff88] text-[#0a0a0a] text-lg font-bold rounded-full overflow-hidden">
+            <button
+              className="hero-btn group relative px-8 py-4 bg-[#00ff88] text-[#0a0a0a] text-lg font-bold rounded-full overflow-hidden"
+              onClick={() => gsap.to(window, { duration: 0.1, scrollTo: '#projects', ease: 'power2.inOut' })}
+            >
               <span className="relative z-10">View Projects</span>
               <div className="absolute inset-0 bg-white/40 translate-x-[-100%] group-hover:translate-x-full transition-transform duration-500 ease-out"></div>
             </button>
           </Magnetic>
           <Magnetic>
-            <button className="hero-btn flex items-center gap-2 px-8 py-4 bg-transparent border border-white/20 text-white text-lg font-bold rounded-full hover:border-[#00ff88] hover:text-[#00ff88] transition-colors">
-              <Download size={20} />
-              <span>Download CV</span>
-            </button>
+            <a
+              href="/Daniel%20Simms%20SWE%20CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-btn flex items-center gap-2 px-8 py-4 bg-transparent border border-white/20 text-white text-lg font-bold rounded-full hover:border-[#00ff88] hover:text-[#00ff88] transition-colors"
+            >
+              <Eye size={20} />
+              <span>View CV</span>
+            </a>
           </Magnetic>
         </div>
       </div>

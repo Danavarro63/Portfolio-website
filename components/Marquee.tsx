@@ -8,6 +8,7 @@ const Marquee: React.FC = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const items = gsap.utils.toArray('.marquee-content');
+      if (!items.length) return;
       const width = (items[0] as HTMLElement).offsetWidth;
 
       gsap.to('.marquee-content', {
@@ -16,26 +17,41 @@ const Marquee: React.FC = () => {
         ease: 'none',
         repeat: -1,
       });
+
+      gsap.to('.marquee-star', {
+        scale: 1.2,
+        rotation: 8,
+        opacity: 1,
+        duration: 1.2,
+        ease: 'sine.inOut',
+        yoyo: true,
+        repeat: -1,
+        stagger: {
+          each: 0.08,
+          from: 'random',
+        },
+      });
+      
     }, containerRef);
+    
 
     return () => ctx.revert();
   }, []);
 
-const techs = [
-  "Python",
-  "JavaScript",
-  "TypeScript",
-  "Java",
-  "React",
-  "Node.js",
-  "Tailwind",
-  "PostgreSQL",
-  "Git",
-  "Docker",
-  "IBM Cloud",
-  "AWS"
-];
-techs.concat(techs)
+  const techs = [
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "Java",
+    "React",
+    "Node.js",
+    "Tailwind",
+    "PostgreSQL",
+    "Git",
+    "Docker",
+    "IBM Cloud",
+    "AWS"
+  ];
 
   return (
     <div ref={containerRef} className="py-8 bg-[#050505] border-y border-white/5 overflow-hidden">
